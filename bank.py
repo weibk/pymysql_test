@@ -3,7 +3,6 @@
 # author:weibk
 # @time:2021/10/6 19:49
 
-import pymysql
 import random
 from DBUtils import update, query
 
