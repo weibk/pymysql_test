@@ -48,8 +48,8 @@ def useradd():
         account = str(random.randint(10, 99)) + str(
             random.randint(10, 99)) + str(
             random.randint(10, 99)) + str(random.randint(10, 99))
+        account = int(account)
         accounts = query("select account from bank_user")
-
         for item in accounts:
             if account == item['account']:
                 continue
@@ -90,7 +90,6 @@ while True:
     step = input("请选择业务：")
     if step == "1":
         info = useradd()
-        print(type(info))
         # 如果开户成功，打印用户信息
         if isinstance(info, dict):
             profile = '''
